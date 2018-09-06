@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import uwu from './uwu.png';
-import './App.css';
+import uwu from './assets/uwu.png';
+import './assets/App.css';
+import wow from './assets/wow.mp3';
+const sound = new Audio(wow);
 
 class App extends Component {
-  constructor() {
-    super()
-  }
 
   render() {
     return (
       <div className="App">
-        <img src={uwu} className="uwu" alt="UwU" />
+        <audio src={wow} autoPlay={false}></audio>
+        <img src={uwu} onClick={sound.play()} className="uwu" alt="UwU" />
       </div>
     );
   }
